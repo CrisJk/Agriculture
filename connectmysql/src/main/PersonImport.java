@@ -24,8 +24,8 @@ public class  PersonImport extends DataImport {
                 // preparedStatement.setString(1, 'table1');
                 this.resultSet = this.preparedStatement.executeQuery();
                 while (this.resultSet.next()) {
-                    String name = trimStr(this.resultSet.getString("name"));
-                    String ID_number = trimStr(this.resultSet.getString("ID_number"));
+                    String name = trimStr(this.resultSet.getString("name"),true);
+                    String ID_number = trimStr(this.resultSet.getString("ID_number"),true);
                     cate.put(name + " " + ID_number, 1);
                 }
             } catch (Exception e) {

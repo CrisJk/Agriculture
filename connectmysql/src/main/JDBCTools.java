@@ -66,7 +66,7 @@ public class JDBCTools {
 
 			for(int i = 0; i < args.length; i++){
 				if(args[i] == "null"){
-					args[i]=null ;
+					args[i]="---" ;
 				}
 				preparedStatement.setObject(i + 1, args[i]);
 			}
@@ -99,7 +99,7 @@ public class JDBCTools {
 			preparedStatement = connection.prepareStatement(sql);
 			for(int i = 0; i < args.length; i++){
 				if(args[i] == "null"){
-					args[i]=null ;
+					args[i]="---" ;
 				}
 				preparedStatement.setObject(i + 1, args[i]);
 
