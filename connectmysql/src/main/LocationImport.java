@@ -24,9 +24,9 @@ public class LocationImport extends DataImport {
                 this.preparedStatement = super.getPreparedStatement(sql,this.connection);
                 this.resultSet = this.preparedStatement.executeQuery();
                 while (this.resultSet.next()) {
-                    String county = trimStr(this.resultSet.getString("county"));
-                    String town = trimStr(this.resultSet.getString("town"));
-                    String village = trimStr(this.resultSet.getString("village"));
+                    String county = trimStr(this.resultSet.getString("county"),true);
+                    String town = trimStr(this.resultSet.getString("town"),true);
+                    String village = trimStr(this.resultSet.getString("village"),true);
                     cate.put(county + " " + town + " " + village, 1);
                 }
 

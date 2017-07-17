@@ -104,15 +104,15 @@ public class SubsidyImport extends DataImport{
 
                 this.resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
-                    String name = trimStr(this.resultSet.getString("name"));
-                    String idNumber = trimStr(this.resultSet.getString("ID_Number"));
-                    String company = trimStr(this.resultSet.getString("company"));
-                    String year = trimStr(this.resultSet.getString("year"));
-                    String county = trimStr(this.resultSet.getString("county"));
-                    String town = trimStr(this.resultSet.getString("town"));
-                    String village = trimStr(this.resultSet.getString("village"));
+                    String name = trimStr(this.resultSet.getString("name"),true);
+                    String idNumber = trimStr(this.resultSet.getString("ID_Number"),true);
+                    String company = trimStr(this.resultSet.getString("company"),true);
+                    String year = trimStr(this.resultSet.getString("year"),false);
+                    String county = trimStr(this.resultSet.getString("county"),true);
+                    String town = trimStr(this.resultSet.getString("town"),true);
+                    String village = trimStr(this.resultSet.getString("village"),true);
                     if(i==0 || i==2 ||i==3||i==4||i==16||i==8) {
-                        cropType[i] = trimStr(this.resultSet.getString("cropType"));
+                        cropType[i] = trimStr(this.resultSet.getString("cropType"),true);
                         if( i== 3){
                             cropType[i]+="渔船油价";
                         }
@@ -129,14 +129,14 @@ public class SubsidyImport extends DataImport{
 
 
                     String subsidy =null;
-                    if(i!=2) {
-                        subsidy = trimStr(this.resultSet.getString("subsidy"));
+                    if(i!=2 && i!=19) {
+                        subsidy = trimStr(this.resultSet.getString("subsidy"),false);
                     }
                     else{
                         if(i==2){
-                            String subsidy1 = trimStr(this.resultSet.getString("subsidy1"));
-                            String subsidy2 = trimStr(this.resultSet.getString("subsidy2"));
-                            if(subsidy1=="0"){
+                            String subsidy1 = trimStr(this.resultSet.getString("subsidy1"),false);
+                            String subsidy2 = trimStr(this.resultSet.getString("subsidy2"),false);
+                            if(subsidy1!="0"){
                                 subsidy = subsidy1;
                             }
                             else{
@@ -144,8 +144,8 @@ public class SubsidyImport extends DataImport{
                             }
                         }
                         if(i==19){
-                            String subsidy1 = trimStr(this.resultSet.getString("subsidy1"));
-                            String subsidy2 = trimStr(this.resultSet.getString("subsidy2"));
+                            String subsidy1 = trimStr(this.resultSet.getString("subsidy1"),false);
+                            String subsidy2 = trimStr(this.resultSet.getString("subsidy2"),false);
                             if(subsidy1==null){
                                 subsidy1="0";
                             }

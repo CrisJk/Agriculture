@@ -43,12 +43,23 @@ public class DataImport {
         }
         return this.preparedStatement;
     }
-    public String trimStr(String str){
-        if(str==null) {
-            return null;
+    public String trimStr(String str,boolean type){
+        if(str==null && type == true) {
+            return "---";
         }
-	    return str.replaceAll("[\\s\\?]", "").replace("　", "");
+        if(str==null && type == false){
+            return "0" ;
+        }
+        String cur = str.replaceAll("[\\s\\?]", "").replace("　", "");
+        if("".equals(cur) && type == true){
+            cur="---";
+        }
+        if("".equals(cur) && type == false){
+            cur="0" ;
+        }
+	    return cur;
     }
+
 
 
 }
