@@ -65,11 +65,53 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="encodings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
+      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/jdbc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonImport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/PersonImport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="27" column="46" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="46" />
+              <folding>
+                <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubsidyImport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/SubsidyImport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2960">
+              <caret line="156" column="21" lean-forward="false" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JDBCTools.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/JDBCTools.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="50" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
               <folding />
             </state>
           </provider>
@@ -78,8 +120,23 @@
       <file leaf-file-name="DataImport.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/DataImport.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="127">
               <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+=======
+            <state relative-caret-position="327">
+              <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompanyImport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/CompanyImport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
               <folding />
             </state>
           </provider>
@@ -125,9 +182,12 @@
         <option value="$PROJECT_DIR$/src/main/PersonImport.java" />
         <option value="$PROJECT_DIR$/src/main/SubsidyImport.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/misc.xml" />
         <option value="$PROJECT_DIR$/uiDesigner.xml" />
+=======
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
       </list>
     </option>
   </component>
@@ -142,9 +202,12 @@
     <option name="y" value="-4" />
     <option name="width" value="1855" />
     <option name="height" value="1084" />
+<<<<<<< HEAD
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
+=======
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -161,7 +224,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,6 +272,10 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -776,15 +846,23 @@
       <workItem from="1500115495639" duration="1038000" />
       <workItem from="1500123235470" duration="2814000" />
       <workItem from="1500127032601" duration="2122000" />
+<<<<<<< HEAD
       <workItem from="1500254968207" duration="2772000" />
       <workItem from="1500271346755" duration="627000" />
       <workItem from="1500271988651" duration="624000" />
       <workItem from="1500272613874" duration="25000" />
+=======
+      <workItem from="1500254968207" duration="2174000" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="93779000" />
+=======
+    <option name="totallyTimeSpent" value="91900000" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="7" />
@@ -822,6 +900,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249309" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -833,6 +912,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44760936" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -858,6 +940,43 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/PersonImport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding>
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JDBCTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/DataImport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CompanyImport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
     <entry file="file://$PROJECT_DIR$/src/main/SubsidyImport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -879,8 +998,12 @@
         <state relative-caret-position="640">
           <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <marker date="1500258996889" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+=======
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           </folding>
         </state>
       </provider>
@@ -914,8 +1037,12 @@
         <state relative-caret-position="800">
           <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <marker date="1500258996889" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+=======
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           </folding>
         </state>
       </provider>
@@ -949,8 +1076,12 @@
         <state relative-caret-position="800">
           <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <marker date="1500258996889" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+=======
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           </folding>
         </state>
       </provider>
@@ -984,8 +1115,12 @@
         <state relative-caret-position="800">
           <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <marker date="1500258996889" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+=======
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           </folding>
         </state>
       </provider>
@@ -1019,8 +1154,12 @@
         <state relative-caret-position="740">
           <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <marker date="1500258996889" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+=======
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           </folding>
         </state>
       </provider>
@@ -1055,8 +1194,12 @@
         <state relative-caret-position="700">
           <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <marker date="1500258996889" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+=======
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           </folding>
         </state>
       </provider>
@@ -1068,16 +1211,35 @@
         <state relative-caret-position="820">
           <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <marker date="1500258996889" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+=======
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/JDBCTools.java">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="50" />
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CompanyImport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <folding />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
         </state>
       </provider>
     </entry>
@@ -1087,13 +1249,18 @@
         <state relative-caret-position="420">
           <caret line="27" column="46" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="46" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <marker date="1500258996889" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+=======
+            <marker date="1500128586981" expanded="true" signature="641:683" ph="SELECT 姓名 na... tablemissingValue" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/SubsidyImport.java">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2960">
           <caret line="156" column="21" lean-forward="false" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
@@ -1106,11 +1273,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="44" />
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2960">
+          <caret line="156" column="21" lean-forward="false" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/DataImport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="180">
           <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding>
@@ -1173,6 +1365,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+=======
+        <state relative-caret-position="560">
+          <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+>>>>>>> 2a2e3995d84eb6082996b34e0b05b93b3662dd85
           <folding />
         </state>
       </provider>
