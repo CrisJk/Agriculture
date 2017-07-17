@@ -1,0 +1,192 @@
+#用户信息表：id,姓名,身份证
+CREATE TABLE person(
+	id int AUTO_INCREMENT,
+	name varchar(50) NOT NULL,
+	ID_number varchar(50) NOT NULL,
+	PRIMARY KEY(id),
+	UNIQUE(name,ID_number),
+	INDEX(name),
+	INDEX(ID_number)
+);
+
+#企业信息表：id,企业名称
+CREATE TABLE company(
+	id int AUTO_INCREMENT,
+	name varchar(100),
+	PRIMARY KEY(id),
+	UNIQUE(name),
+	INDEX(name)
+);
+
+#地区表：id,区县，镇，村，组/队
+CREATE TABLE location(
+	id int AUTO_INCREMENT,
+	county varchar(50),
+	town varchar(50),
+	village varchar(50),
+	PRIMARY KEY(id),
+	UNIQUE(county,town, village),
+	INDEX(county),
+	INDEX(town),
+	INDEX(village)
+);
+
+#种植面积表： receiver_id，receiver_type，year，location_id,种植作物，种植面积
+CREATE TABLE planting_area(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	crop varchar(50),
+	area float,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#农药肥料使用面积表：receiver_id，receiver_type，year，location_id,农药肥料类型，使用量，单位
+CREATE TABLE fertilizer_pesticide_area(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	type varchar(100),
+	quantity float,
+	unit varchar(20),
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#渔业规模表： receiver_id，receiver_type，year，location_id,渔船类型，渔船数量，渔船功率
+CREATE TABLE fishing_scale(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	type varchar(100),
+	quantity int,
+	power float,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#畜牧业规模表： receiver_id，receiver_type，year，location_id,养殖品种，养殖规模
+CREATE TABLE graziery_scale(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	breed varchar(20), 
+	quantity int,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#投保数量表：receiver_id，receiver_type，year，location_id,农业类型，险种，投保数量(万)
+CREATE TABLE insurance(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	type varchar(20),
+	insurance_type varchar(100),
+	quantity float,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#补贴金额表：receiver_id，receiver_type，year，location_id,农业类型，补贴类型，补贴金额(元)
+CREATE TABLE subsidy(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	type varchar(20),
+	subsidy_type varchar(100),
+	money float,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#违规行为表： receiver_id，receiver_type，year，location_id,违规次数
+CREATE TABLE illegal(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	times smallint,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#培训次数表： receiver_id，receiver_type，year，location_id,参加培训次数
+CREATE TABLE training(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	times smallint,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#企业项目规模表： receiver_id，receiver_type，year，location_id,农业类型，项目名称，项目面积(平方米)
+CREATE TABLE project_scale(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint, 
+	type varchar(20),
+	name varchar(100),
+	area float,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+#企业动物强制免疫数量表： receiver_id，receiver_type，year，location_id,动物强制免疫数量
+CREATE TABLE immune(
+	id int AUTO_INCREMENT,
+	receiver_id int NOT NULL,
+	receiver_type varchar(20),
+	location_id int NOT NULL,
+	year smallint,
+	quantity int,
+	PRIMARY KEY(id),
+	FOREIGN KEY(location_id) REFERENCES location(id),
+	INDEX(receiver_id),
+	INDEX(location_id)
+);
+
+
+
+
+
+
+
+
