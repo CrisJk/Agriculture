@@ -1,0 +1,31 @@
+————————————配置————————————
+
+jdbc.properties中加入： excelUrl=/……xlsx文件目录路径/  (excelUrl + “xxxx.xlsx” 为完整路径)
+
+导入poi-3.16下的6个jar包，poi-3.16/lib下的5个jar包，poi-3.16/ooxml-lib下的2个jar包
+
+将Excel_reader.java 和 XLSX2CSV.java 导入项目
+
+————————————方法————————————
+
+Excel_reader类中的:
+
+xlsx_reader(String excel_name , ArrayList<Object> args)
+
+//excel_name为要读取的xlsx文件名（带后缀） , args为要获取的列号的列表
+//返回二维数组ArrayList<ArrayList<String>>  第一维表示xlsx的行，第二维表示xlsx中该行的单元格
+
+//空单元格返回null，需要自己处理成—--或0
+
+//args可以填 int 或者 String  ，若args[i]为int,那么返回的二维数组的第I列为xlsx中的第args[i]列
+//若args[i]为String,那么返回的二维数组的第i列为改字符常量
+
+
+//例如 xlsx_reader(“崇明县-表15：“夏淡”绿叶菜种植补贴-2014.xlsx”,args)
+// 其中 args=[7,8,9,”绿肥”]
+//那么返回的二维数组内容如下：
+    [小明 , 350401219948383**** , null , 绿肥]
+    [小红 , 645354354354323**** , null , 绿肥]
+    [小兰 , 445353453425643**** , null , 绿肥]
+     。。。。。。
+  
