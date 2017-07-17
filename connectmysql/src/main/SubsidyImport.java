@@ -25,13 +25,10 @@ public class SubsidyImport extends DataImport{
      * @return
      */
     public ArrayList<String> getIdList(String querySql,String insertSql,Object... args){
-        System.out.println(querySql);
-        System.out.println(insertSql);
         for(int i = 0;i<args.length;i++){
             if(args[i]==null){
                 args[i]="";
             }
-            System.out.println(args[i]);
         }
         ArrayList<String> idList =new ArrayList<>();
         try {
@@ -95,7 +92,6 @@ public class SubsidyImport extends DataImport{
                         null,"市级财政扶持农民专业合作社项目",null,null,"农业部蔬菜标准园及上海市蔬菜标准园创建补贴资金","农业旅游专项扶持",
                         "现代农业发展项目","小麦赤霉病防治药剂"};
         for(int i = 0 ; i<table.length;i++) {
-            System.out.println(sql[i]);
 
 
             this.preparedStatement = super.getPreparedStatement(sql[i], this.connection);

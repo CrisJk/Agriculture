@@ -3,4 +3,5 @@
 *.tar.gz
 #忽略 jar 包
 *.jar
-
+#忽略.class文件
+*.class

@@ -44,7 +44,6 @@ public class LocationImport extends DataImport {
         while (it.hasNext()) {
             String location = it.next();
             input = location.split(" ");
-           // System.out.println(sql+input[0]+input[1]+input[2]);
             JDBCTools.update("jdbcUrl", sql, this.connection,input[0], input[1], input[2]);
         }
     }
