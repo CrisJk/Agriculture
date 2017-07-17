@@ -10,8 +10,10 @@ Tips: 使用Excel_reader在java中从excel读取数据，若单元格无内容�
 
 ########original_data_sql路径：
       从原始excel提取出的有用的数据
-      需要建表后将改目录下的sql导入
+      需要建表后将该目录下的sql导入
 
-########eason分支下：
-      Excel_reader.java  : excel读取类
-      Excel_info.java  : excel文件名参数名存储类
+########jar：
+      用到的jar包
+      
+########excel_reader：
+      excel文档读取器
