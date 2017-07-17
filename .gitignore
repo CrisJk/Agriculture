@@ -1,0 +1,6 @@
+# 忽略zip tar.gz
+*.zip
+*.tar.gz
+#忽略 jar 包
+*.jar
+
