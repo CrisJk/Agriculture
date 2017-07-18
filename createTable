@@ -120,7 +120,7 @@ CREATE TABLE subsidy(
 	subsidy_type varchar(100),
 	money float,
 	PRIMARY KEY(id),
-	FOREIGN KEY(location_id) REFERENCES location(id),
+	FOREIGN KEY(location_id) REFERENCES location(id)
 	#INDEX(receiver_id),
 	#INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
@@ -135,9 +135,10 @@ CREATE TABLE illegal(
 	times smallint,
 	PRIMARY KEY(id),
 	FOREIGN KEY(location_id) REFERENCES location(id),
+	UNIQUE(receiver_id,receiver_type,year),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #培训次数表： receiver_id，receiver_type，year，location_id,参加培训次数
 CREATE TABLE training(

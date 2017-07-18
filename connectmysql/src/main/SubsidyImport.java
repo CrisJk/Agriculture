@@ -17,33 +17,6 @@ public class SubsidyImport extends DataImport{
     Connection connection = null ;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
-     /**获取与当前插入的location_id和receive_id
-     *
-      @param querySql 查询的sql语句
-     * @param insertSql 插入的sql语句
-     * @param args
-     * @return
-     */
-    public ArrayList<String> getIdList(String querySql,String insertSql,Object... args){
-        for(int i = 0;i<args.length;i++){
-            if(args[i]==null){
-                args[i]="";
-            }
-        }
-        ArrayList<String> idList =new ArrayList<>();
-        try {
-            idList = JDBCTools.get("jdbcUrl",querySql,this.connection,args);
-            if(idList.size() == 0){
-                JDBCTools.update("jdbcUrl",insertSql,this.connection,args);
-                idList=getIdList(querySql,insertSql,args);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return idList;
-    }
     /**
      * 导入补贴数据
      */
@@ -81,13 +54,6 @@ public class SubsidyImport extends DataImport{
                 preSql + "`实际补贴(元)` subsidy from table43"
         };
 
-
-        String location_sql = "SELECT id FROM location WHERE (county=? AND town= ? AND village=?)";
-        String receiver_company_sql = "SELECT id FROM company WHERE (name = ?)";
-        String receiver_person_sql = "SELECT id FROM person WHERE (name=? AND ID_number = ?)" ;
-        String receiver_person_insert_sql = "INSERT INTO person(name, ID_number) VALUES(?,?)";
-        String receiver_company_insert_sql = "INSERT INTO company(name) VALUES(?)";
-        String location_insert_sql="INSERT INTO location (county, town, village) VALUES(?,?,?)";
         String [] cropType={null,"蔬菜",null,null,null,"蔬菜农药","渔船改造",null,"贷款","绿肥植物","农村村庄改造","夏淡绿叶菜","水稻农药","商品有机肥","高水平设施菜田建设","标准化水产养殖场建设",
                         null,"市级财政扶持农民专业合作社项目",null,null,"农业部蔬菜标准园及上海市蔬菜标准园创建补贴资金","农业旅游专项扶持",
                         "现代农业发展项目","小麦赤霉病防治药剂"};
@@ -154,40 +120,21 @@ public class SubsidyImport extends DataImport{
                     String receiverType = "";
                     ArrayList<String> receiverIdList = new ArrayList<>();
                     //获取receiver_type
-                    if (company == null) {
-                        receiverType = "个人";
-                        //获取receiverId
-                        if(name == null && idNumber == null){
-                            receiverIdList.add("-1");
-                        }
-                        else {
-                            receiverIdList = getIdList(receiver_person_sql, receiver_person_insert_sql, name, idNumber);
-                            if (receiverIdList.size() == 0) {
-                                continue;
-                            }
-                        }
-                    } else {
-                        receiverType = "企业";
-                        if(name == null){
-                            receiverIdList.add("-1");
-                        }
-                        else {
-                            receiverIdList = getIdList(receiver_company_sql, receiver_company_insert_sql, name);
-                            if (receiverIdList.size() == 0) {
-                                continue;
-                            }
-                        }
+                    receiverType = getReceiverType(company);
+                    if(receiverType == "个人"){
+                        receiverIdList = getReceiverId(name,idNumber);
+                    }
+                    else{
+                        receiverIdList = getReceiverId(company);
+                    }
+                    if (receiverIdList.size() == 0) {
+                        continue;
                     }
                     //获取locationId
                     ArrayList<String> locationIdList = new ArrayList<>();
-                    if(county == null && town == null && village == null){
-                        locationIdList.add("-1");
-                    }
-                    else {
-                        locationIdList = getIdList(location_sql, location_insert_sql, county, town, village);
-                        if (locationIdList.size() == 0) {
-                            continue;
-                        }
+                    locationIdList = getLocationId(county,town,village);
+                    if(locationIdList.size() == 0){
+                        continue;
                     }
                     String insert_sql = "INSERT INTO subsidy(receiver_id,receiver_type,location_id,year,type,subsidy_type,money) VALUES(?,?,?,?,?,?,?)";
                     JDBCTools.update("jdbcUrl", insert_sql, this.connection, receiverIdList.get(0), receiverType, locationIdList.get(0), year,agricultureType[i], cropType[i], subsidy);

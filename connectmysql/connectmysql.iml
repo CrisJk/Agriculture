@@ -16,5 +16,28 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/lib/log4j-1.2.17.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/lib/junit-4.12.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/lib/commons-logging-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/lib/commons-collections4-4.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/lib/commons-codec-1.10.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/poi-3.16.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/poi-examples-3.16.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/poi-excelant-3.16.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/poi-ooxml-3.16.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/poi-ooxml-schemas-3.16.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/ooxml-lib/curvesapi-1.04.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/ooxml-lib/xmlbeans-2.6.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar/poi-3.16/poi-scratchpad-3.16.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

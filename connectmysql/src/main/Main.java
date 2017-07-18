@@ -6,10 +6,12 @@ public class Main {
 		CompanyImport companyImport=new CompanyImport();
 		PersonImport personImport = new PersonImport();
 		SubsidyImport subsidyImport = new SubsidyImport();
+		ViolationsImport violationsImport = new ViolationsImport();
 		//locationImport.importLocation();
 		//companyImport.importCompany();
 		//personImport.importPerson();
-		subsidyImport.importSubsidy();
+		//subsidyImport.importSubsidy();
+		violationsImport.importViolations();
 
 		//		tab.Import_location();
 //		tab.Import_person();
