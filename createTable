@@ -149,6 +149,7 @@ CREATE TABLE training(
 	times smallint,
 	PRIMARY KEY(id),
 	FOREIGN KEY(location_id) REFERENCES location(id),
+	UNIQUE(receiver_id,receiver_type,year),
 	INDEX(receiver_id),
 	INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
