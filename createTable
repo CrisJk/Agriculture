@@ -62,14 +62,15 @@ CREATE TABLE fertilizer_pesticide_area(
 	INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
 
-#渔业规模表： receiver_id，receiver_type，year，location_id,渔船类型,渔船功率
+#渔业规模表： receiver_id，receiver_type，year，location_id,渔船类型,渔船名号,渔船功率
 CREATE TABLE fishing_scale(
 	id int AUTO_INCREMENT,
 	receiver_id int NOT NULL,
 	receiver_type varchar(20),
 	location_id int NOT NULL,
 	year smallint,
-	type varchar(100),
+	type varchar(50),
+	name varchar(50),
 	power float,
 	PRIMARY KEY(id),
 	FOREIGN KEY(location_id) REFERENCES location(id),
