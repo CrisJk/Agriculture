@@ -89,13 +89,6 @@ public class DataImport {
             idList = JDBCTools.get("jdbcUrl",querySql,this.connection,args);
             if(idList.size() == 0){
                 JDBCTools.update("jdbcUrl",insertSql,this.connection,args);
-                while (true) {
-                    Scanner scanner = new Scanner(System.in);
-                    String read = scanner.nextLine();
-                    if (read == "aaaa") {
-                        break;
-                    }
-                }
                 idList=getIdList(querySql,insertSql,args);
             }
 

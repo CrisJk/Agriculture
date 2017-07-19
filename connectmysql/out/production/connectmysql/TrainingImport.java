@@ -80,6 +80,5 @@ public class TrainingImport extends DataImport {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

@@ -41,9 +41,12 @@ public class SubsidyImport extends DataImport{
                 preSql + "`实际补贴金额` subsidy from table15",
                 preSql + "`实际补贴(元)` subsidy from table17",
                 preSql + "`实际补贴(元)` subsidy from table18",
-                preSql + "`当年实际拨付金额(各级财政合计)` subsidy from table21",
-                preSql + "`当年市财政实际拨付金额(元)` subsidy from table23",
-                preSql + "`实际拨付金额(元)` subsidy , 种植品种 cropType from table24",
+                "SELECT 姓名 name,身份证号码 ID_Number,建设单位 company,年度 year, 区县 county,镇 town,村 village," +
+                        "`当年实际拨付金额(各级财政合计)` subsidy from table21",
+                "SELECT 姓名 name,身份证号码 ID_Number,项目实施单位 company,年度 year, 区县 county,镇 town,村 village,"  +
+                        "`当年市财政实际拨付金额(元)` subsidy from table23",
+                "SELECT 姓名 name,身份证号码 ID_Number,建设单位 company,年度 year, 区县 county,镇 town,村 village," +
+                        "`实际拨付金额(元)` subsidy , 种植品种 cropType from table24",
                 preSql + "`市级财政扶持金额（元）` subsidy from table27",
                 preSql + "`市级财政经费补贴（元）` subsidy ,种类或品种 cropType from table31",
                 "SELECT 姓名 name,身份证号码 ID_Number,`合作社/企业名称`,年度 year, 区县 county,镇 town,村 village," +

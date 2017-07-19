@@ -12,7 +12,7 @@ public class Main {
 		//companyImport.importCompany();
 		//personImport.importPerson();
 		//subsidyImport.importSubsidy();
-		//violationsImport.importViolations();
+		violationsImport.importViolations();
 		trainingImport.importTraining();
 		//		tab.Import_location();
 //		tab.Import_person();
