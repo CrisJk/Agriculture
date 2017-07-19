@@ -5,3 +5,5 @@
 *.jar
 #忽略.class文件
 *.class
+#忽略.sql
+*.sql
