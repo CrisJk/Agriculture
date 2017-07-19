@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/main/CompanyImport.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/DataImport.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/Excel_reader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/JDBCTools.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/LocationImport.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/PersonImport.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/SubsidyImport.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/ViolationsImport.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/XLSX2CSV.java" charset="UTF-8" />
+  </component>
+</project>
