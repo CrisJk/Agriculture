@@ -2,12 +2,12 @@
 CREATE TABLE person(
 	id int AUTO_INCREMENT,
 	name varchar(50) NOT NULL,
-	ID_number varchar(50) NOT NULL,
+	ID_number varchar(20) NOT NULL,
 	PRIMARY KEY(id),
 	UNIQUE(name,ID_number),
 	INDEX(name),
 	INDEX(ID_number)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #企业信息表：id,企业名称
 CREATE TABLE company(
@@ -16,9 +16,9 @@ CREATE TABLE company(
 	PRIMARY KEY(id),
 	UNIQUE(name),
 	INDEX(name)
-);
+)DEFAULT CHARACTER SET UTF8;
 
-#地区表：id,区县，镇，村，组/队
+#地区表：id,区县，镇，村
 CREATE TABLE location(
 	id int AUTO_INCREMENT,
 	county varchar(50),
@@ -29,7 +29,7 @@ CREATE TABLE location(
 	INDEX(county),
 	INDEX(town),
 	INDEX(village)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #种植面积表： receiver_id，receiver_type，year，location_id,种植作物，种植面积
 CREATE TABLE planting_area(
@@ -44,7 +44,7 @@ CREATE TABLE planting_area(
 	FOREIGN KEY(location_id) REFERENCES location(id),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #农药肥料使用面积表：receiver_id，receiver_type，year，location_id,农药肥料类型，使用量，单位
 CREATE TABLE fertilizer_pesticide_area(
@@ -60,23 +60,23 @@ CREATE TABLE fertilizer_pesticide_area(
 	FOREIGN KEY(location_id) REFERENCES location(id),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
-#渔业规模表： receiver_id，receiver_type，year，location_id,渔船类型，渔船数量，渔船功率
+#渔业规模表： receiver_id，receiver_type，year，location_id,渔船类型,渔船名号,渔船功率
 CREATE TABLE fishing_scale(
 	id int AUTO_INCREMENT,
 	receiver_id int NOT NULL,
 	receiver_type varchar(20),
 	location_id int NOT NULL,
 	year smallint,
-	type varchar(100),
-	quantity int,
+	type varchar(50),
+	name varchar(50),
 	power float,
 	PRIMARY KEY(id),
 	FOREIGN KEY(location_id) REFERENCES location(id),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #畜牧业规模表： receiver_id，receiver_type，year，location_id,养殖品种，养殖规模
 CREATE TABLE graziery_scale(
@@ -91,7 +91,7 @@ CREATE TABLE graziery_scale(
 	FOREIGN KEY(location_id) REFERENCES location(id),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #投保数量表：receiver_id，receiver_type，year，location_id,农业类型，险种，投保数量(万)
 CREATE TABLE insurance(
@@ -107,7 +107,7 @@ CREATE TABLE insurance(
 	FOREIGN KEY(location_id) REFERENCES location(id),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #补贴金额表：receiver_id，receiver_type，year，location_id,农业类型，补贴类型，补贴金额(元)
 CREATE TABLE subsidy(
@@ -120,10 +120,10 @@ CREATE TABLE subsidy(
 	subsidy_type varchar(100),
 	money float,
 	PRIMARY KEY(id),
-	FOREIGN KEY(location_id) REFERENCES location(id),
-	INDEX(receiver_id),
-	INDEX(location_id)
-);
+	FOREIGN KEY(location_id) REFERENCES location(id)
+	#INDEX(receiver_id),
+	#INDEX(location_id)
+)DEFAULT CHARACTER SET UTF8;
 
 #违规行为表： receiver_id，receiver_type，year，location_id,违规次数
 CREATE TABLE illegal(
@@ -135,9 +135,10 @@ CREATE TABLE illegal(
 	times smallint,
 	PRIMARY KEY(id),
 	FOREIGN KEY(location_id) REFERENCES location(id),
+	UNIQUE(receiver_id,receiver_type,year),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #培训次数表： receiver_id，receiver_type，year，location_id,参加培训次数
 CREATE TABLE training(
@@ -149,9 +150,10 @@ CREATE TABLE training(
 	times smallint,
 	PRIMARY KEY(id),
 	FOREIGN KEY(location_id) REFERENCES location(id),
+	UNIQUE(receiver_id,receiver_type,year),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #企业项目规模表： receiver_id，receiver_type，year，location_id,农业类型，项目名称，项目面积(平方米)
 CREATE TABLE project_scale(
@@ -167,7 +169,7 @@ CREATE TABLE project_scale(
 	FOREIGN KEY(location_id) REFERENCES location(id),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
+)DEFAULT CHARACTER SET UTF8;
 
 #企业动物强制免疫数量表： receiver_id，receiver_type，year，location_id,动物强制免疫数量
 CREATE TABLE immune(
@@ -181,12 +183,5 @@ CREATE TABLE immune(
 	FOREIGN KEY(location_id) REFERENCES location(id),
 	INDEX(receiver_id),
 	INDEX(location_id)
-);
-
-
-
-
-
-
-
+)DEFAULT CHARACTER SET UTF8;
 
