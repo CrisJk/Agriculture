@@ -34,7 +34,8 @@ public class SubsidyImport extends DataImport{
                 preSql + "农机型号 cropType,`总补贴额(元)` subsidy from table6",
                 preSql + "`实际补贴金额（各级财政合计）（元）` subsidy from table7",
                 preSql + "`补贴金额（元）` subsidy from table8",
-                preSql + "按市发文件规定保费补贴金额 subsidy ,险种 cropType from table9",
+                "SELECT 姓名 name,身份证号码 ID_Number,单位名称 company,年度 year, 区 county,镇 town,村 village," +
+                        "按市发文件规定保费补贴金额 subsidy ,险种 cropType from table9",
                 preSql + "`当年实际补贴金额(各级财政合计,元)` subsidy from table12",
                 preSql + "`实际补贴(元)` subsidy from table13",
                 preSql + "`项目总投资(万元)`from table14",
@@ -128,6 +129,7 @@ public class SubsidyImport extends DataImport{
                         receiverIdList = getReceiverId(name,idNumber);
                     }
                     else{
+
                         receiverIdList = getReceiverId(company);
                     }
                     if (receiverIdList.size() == 0) {

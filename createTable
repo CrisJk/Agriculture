@@ -120,7 +120,7 @@ CREATE TABLE subsidy(
 	subsidy_type varchar(100),
 	money float,
 	PRIMARY KEY(id),
-	FOREIGN KEY(location_id) REFERENCES location(id)
+	FOREIGN KEY(location_id) REFERENCES location(id),
 	#INDEX(receiver_id),
 	#INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
