@@ -31,7 +31,7 @@ CREATE TABLE location(
 	INDEX(village)
 )DEFAULT CHARACTER SET UTF8;
 
-#种植面积表： receiver_id，receiver_type，year，location_id,种植作物，种植面积
+#种植面积表： receiver_id，receiver_type，year，location_id,种植作物，种植面积(亩)
 CREATE TABLE planting_area(
 	id int AUTO_INCREMENT,
 	receiver_id int NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE planting_area(
 	INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
 
-#农药肥料使用面积表：receiver_id，receiver_type，year，location_id,农药肥料类型，使用量，单位
+#农药肥料使用面积表：receiver_id，receiver_type，year，location_id,农药肥料类型，使用量，单位(亩/件)
 CREATE TABLE fertilizer_pesticide_area(
 	id int AUTO_INCREMENT,
 	receiver_id int NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE fertilizer_pesticide_area(
 	INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
 
-#渔业规模表： receiver_id，receiver_type，year，location_id,渔船类型,渔船名号,渔船功率
+#渔业规模表： receiver_id，receiver_type，year，location_id,渔船类型,渔船名号,渔船功率(千瓦)
 CREATE TABLE fishing_scale(
 	id int AUTO_INCREMENT,
 	receiver_id int NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE fishing_scale(
 	INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
 
-#畜牧业规模表： receiver_id，receiver_type，year，location_id,养殖品种，养殖规模
+#畜牧业规模表： receiver_id，receiver_type，year，location_id,养殖品种，养殖规模(头/只/羽)
 CREATE TABLE graziery_scale(
 	id int AUTO_INCREMENT,
 	receiver_id int NOT NULL,
@@ -185,4 +185,3 @@ CREATE TABLE immune(
 	INDEX(receiver_id),
 	INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
-
