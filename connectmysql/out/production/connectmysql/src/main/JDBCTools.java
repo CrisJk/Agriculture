@@ -104,6 +104,7 @@ public class JDBCTools {
 				preparedStatement.setObject(i + 1, args[i]);
 
 			}
+			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
 
 

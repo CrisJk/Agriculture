@@ -171,14 +171,15 @@ CREATE TABLE project_scale(
 	INDEX(location_id)
 )DEFAULT CHARACTER SET UTF8;
 
-#企业动物强制免疫数量表： receiver_id，receiver_type，year，location_id,动物强制免疫数量
+#企业动物强制免疫数量表： receiver_id，receiver_type，year，location_id,疫苗种类,疫苗数量
 CREATE TABLE immune(
 	id int AUTO_INCREMENT,
 	receiver_id int NOT NULL,
 	receiver_type varchar(20),
 	location_id int NOT NULL,
 	year smallint,
-	quantity int,
+	type varchar(60),
+	quantity float,
 	PRIMARY KEY(id),
 	FOREIGN KEY(location_id) REFERENCES location(id),
 	INDEX(receiver_id),

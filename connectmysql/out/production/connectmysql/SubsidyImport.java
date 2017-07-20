@@ -22,8 +22,8 @@ public class SubsidyImport extends DataImport{
      */
     public void importSubsidy() {
         this.connection = super.getConnection("jdbcUrl");
-        //农业类型      0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
-        int table[] = {1,2,3,5,6,7,8,9,12,13,14,15,17,18,21,23,24,27,31,35,36,39,40,43};
+        //农业类型      0 1 2 3 4 5 6 7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+        int table[] = {1,2,3,5,6,7,8,9,12,13,15,17,18,21,23,24,27,31,35,36,39,43};
         String [] agricultureType = {"种植业","种植业","种植业","渔业","农机购置","种植业","渔业","保险","贷款","种植业","项目","种植业","种植业","种植业","项目",
                 "项目","项目","项目","项目","项目","项目","项目","项目","种植业"};
         String preSql = "SELECT 姓名 name,身份证号码 ID_Number,`合作社/企业名称` company,年度 year, 区县 county,镇 town,村 village,";
@@ -34,27 +34,30 @@ public class SubsidyImport extends DataImport{
                 preSql + "农机型号 cropType,`总补贴额(元)` subsidy from table6",
                 preSql + "`实际补贴金额（各级财政合计）（元）` subsidy from table7",
                 preSql + "`补贴金额（元）` subsidy from table8",
-                "SELECT 姓名 name,身份证号码 ID_Number,单位名称 company,年度 year, 区 county,镇 town,村 village," +
+                "SELECT 姓名 name,身份证号码 id_number,单位名称 company,年度 year, 区 county,镇 town,村 village," +
                         "按市发文件规定保费补贴金额 subsidy ,险种 cropType from table9",
-                preSql + "`当年实际补贴金额(各级财政合计,元)` subsidy from table12",
+                "SELECT 合作社名称 company,年度 year, 区县 county,镇 town,村 village," +
+                        "`当年实际补贴金额(各级财政合计,元)` subsidy from table12",
                 preSql + "`实际补贴(元)` subsidy from table13",
-                preSql + "`项目总投资(万元)`from table14",
                 preSql + "`实际补贴金额` subsidy from table15",
                 preSql + "`实际补贴(元)` subsidy from table17",
                 preSql + "`实际补贴(元)` subsidy from table18",
-                "SELECT 姓名 name,身份证号码 ID_Number,建设单位 company,年度 year, 区县 county,镇 town,村 village," +
+                "SELECT 建设单位 company,年度 year, 区县 county,镇 town,村 village," +
                         "`当年实际拨付金额(各级财政合计)` subsidy from table21",
-                "SELECT 姓名 name,身份证号码 ID_Number,项目实施单位 company,年度 year, 区县 county,镇 town,村 village,"  +
+                "SELECT 项目实施单位 company,年度 year, 区县 county,镇 town,村 village,"  +
                         "`当年市财政实际拨付金额(元)` subsidy from table23",
-                "SELECT 姓名 name,身份证号码 ID_Number,建设单位 company,年度 year, 区县 county,镇 town,村 village," +
+                "SELECT 建设单位 company,年度 year, 区县 county,镇 town,村 village," +
                         "`实际拨付金额(元)` subsidy , 种植品种 cropType from table24",
-                preSql + "`市级财政扶持金额（元）` subsidy from table27",
-                preSql + "`市级财政经费补贴（元）` subsidy ,种类或品种 cropType from table31",
-                "SELECT 姓名 name,身份证号码 ID_Number,`合作社/企业名称`,年度 year, 区县 county,镇 town,村 village," +
+                "SELECT 合作社名称 company,年度 year, 区县 county,镇 town,村 village,"+
+                         "`市级财政扶持金额（元）` subsidy from table27",
+                "SELECT 项目承担单位 company,年度 year, 区县 county,镇 town,村 village,"+
+                         "`市级财政经费补贴（元）` subsidy ,种类或品种 cropType from table31",
+                "SELECT 示范方名称 company,年度 year, 区县 county,镇 town,村 village," +
                         "`实际补贴(市级财政)(元)` subsidy ,种植品 cropType from table35",
-                preSql + "`中央财政 subsidy1,市级财政 subsidy2 from table36",
-                preSql + "实际补贴金额 subsidy from table39",
-                preSql + "项目总投资 subsidy from table40",
+                "SELECT 单位 company,年度 year, 区县 county,镇 town,村 village," +
+                        "`中央财政 subsidy1,市级财政 subsidy2 from table36",
+                "SELECT 实施单位名称 company,年度 year, 区县 county,镇 town,村 village,"+
+                        "实际补贴金额 subsidy from table39",
                 preSql + "`实际补贴(元)` subsidy from table43"
         };
 
@@ -77,18 +80,18 @@ public class SubsidyImport extends DataImport{
                     String county = trimStr(this.resultSet.getString("county"),true);
                     String town = trimStr(this.resultSet.getString("town"),true);
                     String village = trimStr(this.resultSet.getString("village"),true);
-                    if(i==0 || i==2 ||i==3||i==4||i==16||i==8) {
+                    if(i==0 || i==2 ||i==3||i==4||i==15||i==8) {
                         cropType[i] = trimStr(this.resultSet.getString("cropType"),true);
                         if( i== 3){
                             cropType[i]+="渔船油价";
                         }
-                        if(i==16){
+                        if(i==15){
                             cropType[i]="经济作物标准化基地建设_"+cropType[i];
                         }
-                        if(i==18){
+                        if(i==17){
                             cropType[i]="水产原种、良种资源保护_"+cropType[i];
                         }
-                        if(i==19){
+                        if(i==18){
                             cropType[i]="稻麦作物高产_"+cropType[i];
                         }
                     }
@@ -109,7 +112,7 @@ public class SubsidyImport extends DataImport{
                                 subsidy = subsidy2;
                             }
                         }
-                        if(i==19){
+                        if(i==18){
                             String subsidy1 = trimStr(this.resultSet.getString("subsidy1"),false);
                             String subsidy2 = trimStr(this.resultSet.getString("subsidy2"),false);
                             if(subsidy1==null){

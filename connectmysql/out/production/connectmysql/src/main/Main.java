@@ -9,13 +9,15 @@ public class Main {
 		ViolationsImport violationsImport = new ViolationsImport();
 		TrainingImport trainingImport = new TrainingImport();
 		ImmuneImport immuneImport = new ImmuneImport();
+		ProjectScaleImport projectScaleImport = new ProjectScaleImport();
 		//locationImport.importLocation();
 		//companyImport.importCompany();
 		//personImport.importPerson();
-		subsidyImport.importSubsidy();
+		//subsidyImport.importSubsidy();
 		//violationsImport.importViolations();
 		//trainingImport.importTraining();
 		immuneImport.importImmune();
+		projectScaleImport.importProjectScale();
 		//		tab.Import_location();
 //		tab.Import_person();
 		//locationImport.Import_company();
